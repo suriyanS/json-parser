@@ -97,11 +97,6 @@ In order to handle incomplete JSON strings effectively, the application employs 
 This approach ensures that the JSON parsing is robust, covering various scenarios and enhancing the reliability of the application.
 
 
-## Notes
-- The application is developed without using external libraries for JSON parsing.
-- It is designed to handle incomplete JSON strings based on the specified format.
-- Feel free to explore and contribute to enhance the capabilities of this JSON parser!
-
 ## Future Enhancement
 
 ### Improved Handling of Incomplete JSON
@@ -120,4 +115,10 @@ This improvement might involve:
   - Enhancing error reporting to provide clear and user-friendly messages, aiding users in understanding and correcting issues with their JSON input.
 
 By continuously refining the JSON parsing capabilities, the application can offer a more versatile and user-friendly experience, accommodating a broader range of real-world scenarios.
+
+## Notes
+- The application is developed without using external libraries for JSON parsing.
+- It is designed to handle incomplete JSON strings based on the specified format.
+- Feel free to explore and contribute to enhance the capabilities of this JSON parser!
+
 
