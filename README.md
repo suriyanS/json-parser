@@ -65,6 +65,68 @@ The application currently parses JSON strings adhering to the following format:
      - **Application URL:** [http://localhost:8080/parseJson](http://localhost:8080/parseJson)
     - **Swagger URL:** [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
    
+## How to Send a Request to `parseJson` Endpoint
+
+To parse a JSON input and obtain the corresponding `Classroom` object, you can send a POST request to the `parseJson` endpoint using a tool like `curl`, Postman, or any HTTP client.
+
+### Example using `curl`
+
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{
+  "className": "year 1",
+  "description": "class for year 1",
+  "numberOfStudents": 5,
+  "groups": [
+    {
+      "group": 1,
+      "students": [
+        {
+          "name": "student A",
+          "needSupport": false
+        },
+        {
+          "name": "student B",
+          "needSupport": true
+        },
+        {
+          "name": "student C",
+          "needSupport": false
+        }
+      ]
+    },
+    {
+      "group": 2,
+      "students": [
+        {
+          "name": "student D",
+          "needSupport": false
+        },
+        {
+          "name": "student E",
+          "needSupport": true
+        }
+      ]
+    }
+  ],
+  "naughtyList": [
+    {
+      "name": "student E",
+      "needSupport": true
+    }
+  ]
+}' http://localhost:8080/parseJson
+```
+
+### Example using Postman
+
+1. Open Postman.
+2. Set the request type to POST.
+3. Enter the URL: [http://localhost:8080/parseJson](http://localhost:8080/parseJson).
+4. Set the request body to the provided JSON data.
+5. Click the "Send" button.
+
+Upon successful parsing, the API will return a response with the details of the parsed `Classroom` object.
+
 
 ## Design Approach
 
